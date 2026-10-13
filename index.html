@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>My Image Gallery</h1>
+        <p>Explore beautiful moments around the world</p>
+    </header>
+
+    <main class="container">
+        <nav class="filters" aria-label="Image categories">
+            <button class="filter active" data-category="all">All</button>
+            <button class="filter" data-category="nature">Nature</button>
+            <button class="filter" data-category="city">City</button>
+            <button class="filter" data-category="animals">Animals</button>
+        </nav>
+
+        <section class="gallery" id="gallery">
+
+            <article class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?w=700"
+                    alt="Beautiful mountain lake" loading="lazy">
+                <div class="caption">Mountain Lake</div>
+            </article>
+
+            <article class="gallery-item" data-category="city">
+                <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=700" alt="City skyline"
+                    loading="lazy">
+                <div class="caption">City Lights</div>
+            </article>
+
+            <article class="gallery-item" data-category="animals">
+                <img src="https://images.unsplash.com/photo-1546182990-dffeafbe841d?w=700" alt="Lion in the wild"
+                    loading="lazy">
+                <div class="caption">Wildlife</div>
+            </article>
+
+            <article class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=700"
+                    alt="Sunlight in a green forest" loading="lazy">
+                <div class="caption">Green Forest</div>
+            </article>
+
+            <article class="gallery-item" data-category="city">
+                <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?w=700" alt="Modern architecture"
+                    loading="lazy">
+                <div class="caption">Architecture</div>
+            </article>
+
+            <article class="gallery-item" data-category="animals">
+                <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=700" alt="Dog outdoors"
+                    loading="lazy">
+                <div class="caption">Cute Dog</div>
+            </article>
+
+            <article class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=700"
+                    alt="Snow-covered mountains" loading="lazy">
+                <div class="caption">Snow Mountains</div>
+            </article>
+
+            <article class="gallery-item" data-category="city">
+                <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=700" alt="Tall city buildings"
+                    loading="lazy">
+                <div class="caption">Urban Life</div>
+            </article>
+
+            <article class="gallery-item" data-category="nature">
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=700"
+                    alt="Scenic natural landscape" loading="lazy">
+                <div class="caption">Nature View</div>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" hidden>
+
+        <button class="close" id="closeBtn" aria-label="Close image viewer">&times;</button>
+
+        <button class="nav prev" id="prevBtn" aria-label="Previous image">&#10094;</button>
+
+        <figure>
+            <img id="lightboxImg" src="" alt="">
+            <figcaption id="imageCaption"></figcaption>
+        </figure>
+
+        <button class="nav next" id="nextBtn" aria-label="Next image">&#10095;</button>
+        <p class="counter" id="counter"></p>
+    </div>
+
+    <footer>
+        <p>© 2026 My Image Gallery | Created with HTML, CSS & JavaScript</p>
+    </footer>
+
+</body>
+
+</html>
